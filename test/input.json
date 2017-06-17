@@ -1,0 +1,27 @@
+{
+  "session": {
+    "sessionId": "SessionId.8bb3979a-ae2e-4529-8f5f-b13b660cf597",
+    "application": {
+      "applicationId": "amzn1.ask.skill.ec499b1a-64b2-43df-b880-228d0e871a4d"
+    },
+    "attributes": {
+      "speechOutput": "Herzlich Willkommen bei PAYBACK. Dein aktueller Punktestand ist 2314. Möchtest du etwas über deine aktuellen Coupons wissen?",
+      "repromptSpeech": "Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“."
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AHFV3X4VEJ7V3JRWTXHF2S3KCR272DE5TZMNOSE7TKRLGFVAZVXLC5DEC4JG35F2N5BPU4FY3EI6W2D2XDRN3UGKNOJFDKW4P3LMGMJSDC4KZAY553MXFUF22BQTMDCKGWET2SI3JZJSR3BMQLYYXFUV223VUXPY4FDEDHB57T5ERWIIC3DDNDQDKILDGMUQTMAZZ2PZNL4Y5HQ"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.be8ad4ed-2a91-413d-b197-a7dc8ecace41",
+    "locale": "de-DE",
+    "timestamp": "2017-06-16T20:29:51Z",
+    "intent": {
+      "name": "PAYBACKPointBalance",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
