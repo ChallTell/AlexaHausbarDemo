@@ -1,0 +1,49 @@
+[
+
+  "White Russian" :{
+    "ingredients": {
+      "Kahlua": "3cl",
+      "Wodka": "3cl",
+      "Sahne": "3cl"
+    },
+    "preparation":"mix"
+  },
+  "Old Fashioned" :{
+    "ingredients": {
+      "Bourbon Whiskey": "3cl",
+      "Sirup": "1cl",
+      "Angustora": "2 Dash"
+    },
+    "garnish" :[
+      "Orange", "Zitrone"
+    ],
+    "preparation":"mix"
+  },
+  "Negroni" :{
+    "ingredients": {
+      "Campari": "2cl",
+      "Wermut": "2cl",
+      "Gin": "2cl",
+      "Soda": "fill up"
+    },
+    "preparation":"stir"
+  },
+  "Daiquiri" :{
+    "ingredients": {
+      "Weißer Rum": "5cl",
+      "Zitronensaft": "3cl",
+      "Sirup": "2cl"
+    },
+    "preparation":"shake"
+  },
+  "Martinin" :{
+    "ingredients": {
+      "Gin": "4cl",
+      "Wermut (Rot oder Trocken)": "4cl"
+    },
+    "garnish" :[
+      "Zitroneschale"
+    ],
+    "preparation":"shake"
+  },
+]

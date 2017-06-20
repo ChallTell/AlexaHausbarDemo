@@ -1,0 +1,23 @@
+{
+  "session": {
+    "sessionId": "SessionId.edfdd535-b577-4a20-8344-412b61c235c1",
+    "application": {
+      "applicationId": "amzn1.ask.skill.ec499b1a-64b2-43df-b880-228d0e871a4d"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AHFV3X4VEJ7V3JRWTXHF2S3KCR272DE5TZMNOSE7TKRLGFVAZVXLC5DEC4JG35F2N5BPU4FY3EI6W2D2XDRN3UGKNOJFDKW4P3LMGMJSDC4KZAY553MXFUF22BQTMDCKGWET2SI3JZJSR3BMQLYYXFUV223VUXPY4FDEDHB57T5ERWIIC3DDNDQDKILDGMUQTMAZZ2PZNL4Y5HQ"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.38f53f01-e1da-4b3b-8287-da3c14560e4e",
+    "locale": "de-DE",
+    "timestamp": "2017-06-17T13:38:54Z",
+    "intent": {
+      "name": "PAYBACKInterestingCoupons",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

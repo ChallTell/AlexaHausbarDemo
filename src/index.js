@@ -1,7 +1,7 @@
 /* eslint-disable  func-names */
 /* eslint quote-props: ["error", "consistent"]*/
 /**
- * PAYBACK Demo Skill, In Dev by @mh0rkk and @lordthundering and Stephan Klocke
+
  **/
 
 'use strict';
@@ -12,26 +12,13 @@ const APP_ID = undefined; // TODO replace with your app ID (OPTIONAL).
 
 const handlers = {
     'NewSession': function () {
-        let pointBalance=2314;
-        this.attributes.speechOutput = this.t('WELCOME_MESSAGE', this.t('SSML_SKILL_NAME'), pointBalance);
-        // If the user either does not reply to the welcome message or says something that is not
-        // understood, they will be prompted again with this text.
-        this.attributes.repromptSpeech = this.t('WELCOME_REPROMT');
-        this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
+        
     },
-    'PAYBACKPointBalance': function () {
-        handlePointBalance(this);
+    'DrinkRequest': function () {
+        queryDrink(this);
     },
 
-    'PAYBACKLastTransactions': function () {
-        handleLastTransactions(this);
-    },
-
-    'PAYBACKInterestingCoupons': function () {
-        handleCoupons(this,null);
-    },
-
-    'PAYBACKInterestingCouponsForPartner': function () {
+    'ChangeDrink': function () {
         const partner = this.event.request.intent.slots.partner;
         let partnerName;
         if (partnerName && partner.value) {
@@ -39,6 +26,9 @@ const handlers = {
         }
 
         handleCoupons(this,partnerName);
+    },
+
+    'PAYBACKInterestingCouponsForPartner': function () {
     },
 
     'AMAZON.HelpIntent': function () {
@@ -61,44 +51,10 @@ const handlers = {
 };
 
 const languageStrings = {
-    'en-GB': {
-        translation: {
-            SKILL_NAME: 'British Minecraft Helper',
-            WELCOME_MESSAGE: "Welcome to %s. You can ask a question like, what\'s the recipe for a chest? ... Now, what can I help you with.",
-            WELCOME_REPROMT: 'For instructions on what you can say, please say help me.',
-            DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
-            HELP_MESSAGE: "You can ask questions such as, what\'s the recipe, or, you can say exit...Now, what can I help you with?",
-            HELP_REPROMT: "You can say things like, what\'s the recipe, or you can say exit...Now, what can I help you with?",
-            STOP_MESSAGE: 'Goodbye!',
-            RECIPE_REPEAT_MESSAGE: 'Try saying repeat.',
-            RECIPE_NOT_FOUND_MESSAGE: "I\'m sorry, I currently do not know ",
-            RECIPE_NOT_FOUND_WITH_ITEM_NAME: 'the recipe for %s. ',
-            RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME: 'that recipe. ',
-            RECIPE_NOT_FOUND_REPROMPT: 'What else can I help with?',
-        },
-    },
-    'en-US': {
-        translation: {
-            SKILL_NAME: 'American Minecraft Helper',
-            WELCOME_MESSAGE: "Welcome to %s. You can ask a question like, what\'s the recipe for a chest? ... Now, what can I help you with.",
-            WELCOME_REPROMT: 'For instructions on what you can say, please say help me.',
-            DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
-            HELP_MESSAGE: "You can ask questions such as, what\'s the recipe, or, you can say exit...Now, what can I help you with?",
-            HELP_REPROMT: "You can say things like, what\'s the recipe, or you can say exit...Now, what can I help you with?",
-            STOP_MESSAGE: 'Goodbye!',
-            RECIPE_REPEAT_MESSAGE: 'Try saying repeat.',
-            RECIPE_NOT_FOUND_MESSAGE: "I\'m sorry, I currently do not know ",
-            RECIPE_NOT_FOUND_WITH_ITEM_NAME: 'the recipe for %s. ',
-            RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME: 'that recipe. ',
-            RECIPE_NOT_FOUND_REPROMPT: 'What else can I help with?',
-        },
-    },
     'de-DE': {
         translation: {
-            SSML_SKILL_NAME: '<phoneme alphabet="ipa" ph="peɪ-bɛk">PAYBACK</phoneme>',
-            SKILL_NAME: 'PAYBACK',
-            WELCOME_MESSAGE: 'Herzlich Willkommen bei %s. Du hast aktuell %i Punkte. Möchtest du etwas über deine aktuellen Coupons wissen?',
-            WELCOME_REPROMT: 'Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.',
+            SKILL_NAME: 'Hausbar',
+            WELCOME_MESSAGE: 'Willkommen an deiner Bar. ',
             HELP_MESSAGE: 'Du kannst beispielsweise Fragen stellen wie „welche ECoupons von REWE habe ich“, du kannst aber auch nach deinen letzten Einkäufen fragen - oder du kannst „Beenden“ sagen ... Was kann PAYBACK für dich tun?',
             HELP_REPROMT: 'Du kannst beispielsweise Sachen sagen wie „Wie geht das Rezept für“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?',
             STOP_MESSAGE: 'Bis bald und viel Spaß beim Einkaufen!',
@@ -138,10 +94,9 @@ function handlePointBalance(alexa)
 function handleCoupons(alexa,partnerName)
 {           
             let pointBalance=2234;
-            if (partnerName== null) {
-                let speechOutput = alexa.t('COUPONS_DEMO_PROMPT');
-            } else if (partnerName=="rewe") {
-
+            let speechOutput= alexa.t('COUPONS_DEMO_PROMPT');
+            if (partnerName=="rewe") {
+                  speechOutput = alexa.t('COUPONS_DEMO_PROMPT');
             }
             let reprompt= alexa.t('COUPONS_REPROMPT');
             

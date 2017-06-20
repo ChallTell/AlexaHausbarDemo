@@ -1,0 +1,123 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "ChangeDrink",
+      "samples": [
+        "Nein zu {NotFittingType} ",
+        "Das ist mir zu {NotFittingType} ",
+        "der ist zu {NotFittingType} ",
+        "fuer mich ist das {NotFittingType} "
+      ],
+      "slots": [
+        {
+          "name": "NotFittingType",
+          "type": "NotFittingType",
+          "samples": [
+            "zu {NotFittingType} ",
+            "Der Drink ist zu {NotFittingType} ",
+            "Einfach einen anderen"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DrinkRequest",
+      "samples": [
+        "nach einem passendem Drink",
+        "einem Getraenk",
+        "einem Cocktail",
+        "einem Drink fuer mich",
+        "einem cocktail fuer mich"
+      ],
+      "slots": []
+    }
+  ],
+  "types": [
+    {
+      "name": "NotFittingType",
+      "values": [
+        {
+          "name": {
+            "value": "sueß"
+          }
+        },
+        {
+          "name": {
+            "value": "sanft"
+          }
+        },
+        {
+          "name": {
+            "value": "herb"
+          }
+        },
+        {
+          "name": {
+            "value": "stark"
+          }
+        },
+        {
+          "name": {
+            "value": "schwach"
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-ChangeDrink.IntentSlot-NotFittingType",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Was passt an diesem Drink nicht?"
+        },
+        {
+          "type": "PlainText",
+          "value": "Was gefaullt dir an diesem Cocktail nicht?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "ChangeDrink",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "NotFittingType",
+            "type": "NotFittingType",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-ChangeDrink.IntentSlot-NotFittingType"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DrinkRequest",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      }
+    ]
+  }
+}
