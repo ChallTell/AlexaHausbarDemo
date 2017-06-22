@@ -1,0 +1,29 @@
+{
+  "session": {
+    "sessionId": "SessionId.2617d54c-354f-4f54-84d4-1b039f7c9d1d",
+    "application": {
+      "applicationId": "amzn1.ask.skill.d1c48b24-24eb-4f9c-b188-2f2b89009317"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AGFPZJ7NS75V6QSOPNZTDB5ALEHI7T2PZFQGT7GLYLLF5QQLSDEOU7QLNGDVSIJVRKJPDIHU4WYBS3I77VZAONI3SIXHWPUVWFJLXAPDCZD3PX4KSRJAAB5HXW6V6GQZVQQEG6L4NTB7QBZKT6YXZFU53SGFXLQEYMCIGZYUVGBMSBXUZJKOSUIIFDE542RLE3WEXZ24QE42IZI"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.3a91c37f-398d-40b6-8680-450a55aaad18",
+    "locale": "de-DE",
+    "timestamp": "2017-06-22T22:56:26Z",
+    "intent": {
+      "name": "RecipeIntent",
+      "slots": {
+        "Item": {
+          "name": "Item",
+          "value": "negroni"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

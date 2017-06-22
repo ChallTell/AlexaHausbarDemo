@@ -15,7 +15,8 @@ const lambdaLocal = require('lambda-local');
         var context = require ('./context.json');
         lambda.handler(event, context);
   */
-        var event = require('./input_coupons_first.json');
+        //var event = require('./randomRecipe.json');
+        var event = require('./knownReceipe.json');
 
    lambdaLocal.execute({
     event: event,

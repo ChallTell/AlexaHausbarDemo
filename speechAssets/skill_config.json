@@ -10,7 +10,13 @@
     },
     {
       "name": "AMAZON.StopIntent",
-      "samples": []
+      "samples": [
+        "Nein",
+        "Abbrechen",
+        "Nein Danke",
+        "Alles klar",
+        "Danke"
+      ]
     },
     {
       "name": "ChangeDrink",
@@ -33,44 +39,168 @@
       ]
     },
     {
-      "name": "DrinkRequest",
+      "name": "RandomDrinkIntent",
       "samples": [
         "nach einem passendem Drink",
         "einem Getraenk",
         "einem Cocktail",
         "einem Drink fuer mich",
+        "einen cocktail fuer mich",
         "einem cocktail fuer mich"
       ],
       "slots": []
+    },
+    {
+      "name": "RecipeIntent",
+      "samples": [
+        "wie geht ein {Item} ",
+        "wie geht {Item}",
+        "nach dem Rezept fuer {Item}",
+        "rezept fuer den Cocktail {Item}",
+        "wie geht ein {Item} cocktail"
+      ],
+      "slots": [
+        {
+          "name": "Item",
+          "type": "Cocktail",
+          "samples": []
+        }
+      ]
     }
   ],
   "types": [
     {
+      "name": "Cocktail",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "White Russian",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Old Fashioned",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Martini",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Planters Punch",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Swimming Pool",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Daiquiri",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Negroni",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Capihirina",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Manhattan",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Moscow Mule",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Munich Mule",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Gin Fizz",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Gin Tonic",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
       "name": "NotFittingType",
       "values": [
         {
+          "id": null,
           "name": {
-            "value": "sueß"
+            "value": "sueß",
+            "synonyms": []
           }
         },
         {
+          "id": null,
           "name": {
-            "value": "sanft"
+            "value": "sanft",
+            "synonyms": []
           }
         },
         {
+          "id": null,
           "name": {
-            "value": "herb"
+            "value": "herb",
+            "synonyms": []
           }
         },
         {
+          "id": null,
           "name": {
-            "value": "stark"
+            "value": "stark",
+            "synonyms": []
           }
         },
         {
+          "id": null,
           "name": {
-            "value": "schwach"
+            "value": "schwach",
+            "synonyms": []
           }
         }
       ]
@@ -111,12 +241,6 @@
             }
           }
         ]
-      },
-      {
-        "name": "DrinkRequest",
-        "confirmationRequired": false,
-        "prompts": {},
-        "slots": []
       }
     ]
   }
