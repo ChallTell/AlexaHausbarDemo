@@ -113,6 +113,7 @@ const handlers = {
         if (itemSlot && itemSlot.value) {
             itemName = itemSlot.value;
         }
+        console.log("Looking for Cocktail: %s",itemName);
         let searchName=itemName.toLowerCase();
         let names=Object.keys(myRecipes);
         var lowerCaseNames = names.map(function(value) {
